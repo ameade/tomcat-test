@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>                                                                                                    
+<Context> 
+
+<Realm   className="org.apache.catalina.realm.JNDIRealm"
+     connectionURL="ldap://localhost:389"
+            userPattern="uid={0},ou=people,dc=mycompany,dc=com"
+                      roleBase="ou=groups,dc=mycompany,dc=com"
+                                roleName="cn"
+                                        roleSearch="(uniqueMember={0})"
+                                        />
+<Resource name="jdbc/oradb"  
+          auth="Container"  
+          type="javax.sql.DataSource"  
+          driverClassName="oracle.jdbc.OracleDriver"  
+          url="jdbc:oracle:thin:@host:1521:sid"  
+          username="username"  
+          password="password"  
+          maxActive="20"  
+          maxIdle="30"  
+          maxWait="-1"  
+/>  
+
+
+</Context>

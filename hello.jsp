@@ -4,7 +4,7 @@
   <html>  
   <head>  
   
-    <sql:query datasource="jdbc/oradb" var="democusts">  
+    <sql:query dataSource="jdbc/oradb" var="tables">  
        show tables
     </sql:query>  
   
@@ -21,5 +21,6 @@
        </tr>  
       </c:forEach>  
     </table>  
+    <h1>Testing LDAP</h1>  
   </body>  
   </html>  

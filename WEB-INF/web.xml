@@ -20,4 +20,23 @@
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
 
+<security-constraint>
+       <web-resource-collection>
+           <web-resource-name>Authenticated area</web-resource-name>
+           <url-pattern>/*</url-pattern>
+       </web-resource-collection>
+       <auth-constraint>
+           <role-name>Authenticated</role-name>
+       </auth-constraint>
+       <user-data-constraint>
+           <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+       </user-data-constraint>
+   </security-constraint>
+   <security-role>
+       <description>
+           This logical role includes all authenticated users
+       </description>
+       <role-name>Authenticated</role-name>
+   </security-role>
+
 </web-app>

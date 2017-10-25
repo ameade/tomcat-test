@@ -5,7 +5,7 @@
   <head>  
   
     <sql:query dataSource="jdbc/oradb" var="tables">  
-       show tables
+      select table_name from all_tables
     </sql:query>  
   
   </head>  

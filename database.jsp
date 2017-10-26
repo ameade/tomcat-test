@@ -13,7 +13,7 @@
     <h1>Testing JDBC JINDI Oracle</h1>  
     <table width='500' border='1'>  
       <tr>  
-        <th align='left'>Tables</th>  
+        <th align='left'>Tables in Database</th>  
       </tr>  
       <c:forEach var="table" items="${tables.rows}">  
         <tr>  
@@ -21,6 +21,6 @@
        </tr>  
       </c:forEach>  
     </table>  
-    <h1>Testing LDAP</h1>  
+    <h1>Testing Authentication and Authorization</h1>  
   </body>  
   </html>  

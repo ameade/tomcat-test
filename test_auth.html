@@ -4,6 +4,16 @@
 </head>
 <body bgcolor=white>
 
-You have access to this page.
+You have access to this page via the Tomcat security context.
+
+   <security-constraint>
+       <web-resource-collection>
+           <web-resource-name>Authenticated area</web-resource-name>
+           <url-pattern>/test_auth.html</url-pattern>
+       </web-resource-collection>
+       <auth-constraint>
+           <role-name>authenticated</role-name>
+       </auth-constraint>
+   </security-constraint>
 </body>
 </html>

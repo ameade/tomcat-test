@@ -23,6 +23,10 @@
               
               Statement stmt = conn.createStatement();
               ResultSet rs = stmt.executeQuery("select table_name from all_tables");
+          while (rs.next()) {
+              String name = rs.getString("table_name");
+              System.out.println("<tr><td>" + name + "</td></tr>");
+          }
       } catch (NamingException ne) {
           System.out.println("NamingException: " + ne);
           System.err.println("NamingException: " + ne);
@@ -35,10 +39,6 @@
           System.out.println("SQLException: " + sqle);
           System.err.println("SQLException: " + sqle);
           sqle.printStackTrace();
-      }
-      while (rs.next()) {
-          String name = rs.getString("table_name");
-          System.out.println("<tr><td>" + name + "</td></tr>");
       }
       %>
     </table>  

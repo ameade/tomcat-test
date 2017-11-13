@@ -26,7 +26,7 @@
            <url-pattern>/test_auth.html</url-pattern>
        </web-resource-collection>
        <auth-constraint>
-           <role-name>authenticated</role-name>
+           <role-name>*</role-name>
        </auth-constraint>
    </security-constraint>
    <security-constraint> 
@@ -43,7 +43,7 @@
        <description>
            This logical role includes all authenticated users
        </description>
-       <role-name>authenticated</role-name>
+       <role-name>*</role-name>
    </security-role>
 
 </web-app>

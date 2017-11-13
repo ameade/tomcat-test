@@ -25,18 +25,18 @@
               ResultSet rs = stmt.executeQuery("select table_name from all_tables");
           while (rs.next()) {
               String name = rs.getString("table_name");
-              System.out.println("<tr><td>" + name + "</td></tr>");
+              out.println("<tr><td>" + name + "</td></tr>");
           }
       } catch (NamingException ne) {
-          System.out.println("NamingException: " + ne);
+          out.println("NamingException: " + ne);
           System.err.println("NamingException: " + ne);
           ne.printStackTrace();
       } catch (ClassCastException cce) {
-          System.out.println("ClassCastException: " + cce);
+          out.println("ClassCastException: " + cce);
           System.err.println("ClassCastException: " + cce);
           cce.printStackTrace();
       } catch (SQLException sqle) {
-          System.out.println("SQLException: " + sqle);
+          out.println("SQLException: " + sqle);
           System.err.println("SQLException: " + sqle);
           sqle.printStackTrace();
       }

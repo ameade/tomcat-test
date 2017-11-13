@@ -36,12 +36,11 @@
           System.err.println("SQLException: " + sqle);
           sqle.printStackTrace();
       }
+      while (rs.next()) {
+          String name = rs.getString("table_name");
+          System.out.println("<tr><td>" + name + "</td></tr>");
+      }
       %>
-      <c:forEach var="table" items="${rs}">  
-        <tr>  
-           <td> ${table.getString("table_name")}</td>  
-       </tr>  
-      </c:forEach>  
     </table>  
   </body>  
   </html>  
